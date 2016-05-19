@@ -1,5 +1,7 @@
 package com.james;
 
+import java.util.ArrayList;
+
 import static com.james.Main.scanner;
 
 /**
@@ -9,16 +11,17 @@ public class Player {
     String name;
     String weapon;
     String location;
+    ArrayList<String> items = new ArrayList<>();
 
     public void chooseName() {
         System.out.println("What is your name?");
-        String name = scanner.nextLine();
+        name = scanner.nextLine();
         System.out.println("Welcome, " + name);
     }
 
     public void chooseWeapon() throws Exception {
         System.out.println("Choose your weapon [sword/mace]");
-        String weapon = scanner.nextLine();
+        weapon = scanner.nextLine();
 
         if (weapon.equalsIgnoreCase("sword")) {
             System.out.println("Sword is a fine choice!");
@@ -31,7 +34,7 @@ public class Player {
 
     public void chooseLocation() throws Exception {
         System.out.println("Choose your location [Forest/Tunnel]");
-        String location = scanner.nextLine();
+        location = scanner.nextLine();
 
         if(location.equalsIgnoreCase("forest")){
             System.out.println("Entering the forest...");
@@ -41,6 +44,16 @@ public class Player {
         }
         else {
             throw new Exception("Invalid location");
+        }
+    }
+
+    public void findItem(String item) {
+        System.out.println("You found " + item +"! Pick it up! [y/n]");
+        String answer = Main.scanner.nextLine();
+        if (answer.equalsIgnoreCase("y")) {
+            items.add("item");
+
+            System.out.println("You now have " + items.size() + "items");
         }
     }
 }
