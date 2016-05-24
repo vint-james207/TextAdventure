@@ -40,7 +40,7 @@ public class Player {
             System.out.println("Entering the forest...");
         }
         else if (location.equalsIgnoreCase("tunnel")){
-            System.out.println("Entering tunnell...");
+            System.out.println("Entering tunnel...");
         }
         else {
             throw new Exception("Invalid location");
