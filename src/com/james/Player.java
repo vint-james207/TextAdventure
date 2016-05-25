@@ -2,7 +2,7 @@ package com.james;
 
 import java.util.ArrayList;
 
-import static com.james.Main.scanner;
+//import static com.james.Main.scanner;
 
 /**
  * Created by jamesyburr on 5/18/16.
@@ -60,5 +60,29 @@ public class Player extends Character {
 
             System.out.printf("You now have %s items\n", items.size());
         }
+    }
+
+    public String getWeapon() {
+        return weapon;
+    }
+
+    public void setWeapon(String weapon) {
+        this.weapon = weapon;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public ArrayList<String> getItems() {
+        return items;
+    }
+
+    public void setItems(ArrayList<String> items) {
+        this.items = items;
     }
 }
